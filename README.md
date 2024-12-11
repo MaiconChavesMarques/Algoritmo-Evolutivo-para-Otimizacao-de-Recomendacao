@@ -50,6 +50,12 @@ Certifique-se de ter o compilador g++ instalado e compile o código com:
 ```bash
 g++ -std=c++17 -o algoritmo algoritmo.cpp
 ```
+# Aplicações
+
+Este algoritmo pode ser usado para:
+1. Sistemas de recomendação que necessitam de balanceamento entre categorias.
+2. Simulações para otimizar a correspondência entre preferências de usuários e itens recomendados.
+3. Estudos de algoritmos evolutivos com dinâmica de predação.
 
 ## Alunos:
 <li> Henrique Yukio Sekido: </li>
