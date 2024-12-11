@@ -47,13 +47,18 @@ A <ins>linha verde</ins> representa o valor real daquele atributo do usuário, a
 A <ins>linha vermelha</ins> representa o valor daquele atributo do "melhor de todos" <br>
 A <ins>linha azul</ins> representa o valor daquele atributo da média de todos os índividuos <br><br>
 
-![Descrição da Imagem](https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2017-10-25.png)
+<div align="center">
+  <img src="https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2017-10-25.png" alt="Descrição da Imagem">
+</div>
 
 - <strong>`Diferença i`</strong>: Existem n gráficos para representar as diferenças<br><br>
 A <ins>linha rosa</ins> representa, em relação ao atributo i,  a diferença entre o <ins>joão</ins> e o <ins>melhor de todos</ins>.<br>
 A <ins>linha amarela</ins> representa, em relação ao atributo i, a diferença entre o <ins>melhor de todos</ins> e a <ins> média</ins>.<br><br>
 
-![Descrição da Imagem](https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2017-11-40.png)
+<div align="center">
+  <img src="https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2017-11-40.png">
+</div>
+
 
 ## Como funciona a avaliação?
 
