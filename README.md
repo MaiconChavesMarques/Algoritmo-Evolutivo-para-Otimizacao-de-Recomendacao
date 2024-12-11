@@ -92,6 +92,10 @@ Este algoritmo pode ser usado para:
 2. Simulações para otimizar a correspondência entre preferências de usuários e itens recomendados.
 3. Estudos de algoritmos evolutivos com dinâmica de predação.
 
+# Link do Vídeo
+
+https://youtu.be/x9VkD12Ihx0?si=wJPJYCvtEEg5yVfl
+
 ## Alunos:
 <li> Henrique Yukio Sekido: 14614564</li>
 <li> Karl Altenhofen Cruz: 14585976</li>
