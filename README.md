@@ -2,7 +2,7 @@
 
 Este repositório contém a implementação de um **algoritmo evolutivo** para um sistema de recomendação balanceada, em que o objetivo é ajustar as recomendações feitas a um usuário com base nas suas preferências e interações simuladas (cliques).
 
-![Descrição da Imagem](https://raw.githubusercontent.com/username/repo/branch/caminho/para/sua-imagem.extensão)
+![Descrição da Imagem](https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2016-32-50.png)
 
 ## Descrição Geral
 
