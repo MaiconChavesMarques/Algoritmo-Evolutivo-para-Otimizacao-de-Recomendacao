@@ -26,9 +26,6 @@ struct Individuo{ // Cada indivíduo possui atributos, e o Fit, que corresponde 
 
 Individuo populacao[tamPopulacao]; // Inicialização da população(conjunto de indivíduos)
 
-//float populacao[tamPopulacao][quantidadeCategorias];
-//float Fit[tamPopulacao];
-
 int melhorI = 0; // Variáveis para salvar o melhor indivíduo
 float melhorV[quantidadeCategorias];
 
@@ -62,51 +59,25 @@ void avaliaPopulacao(){
     float min = float(INT_MAX);
     int totaisClk = 0;
 
-    //printf("aq: %d\n", (int)(populacao[0][0]*100));
     for(int i = 0; i < tamPopulacao; i++){
         totaisClk = 0;
         diferenca[i] = 0;
         for(int j = 0; j < quantidadeCategorias; j++){
-            //printf("%d ", (int)(populacao[i][j]*100));
             for(int k = 0; k < (int)(populacao[i].atributos[j]*1000)+50; k++){
                 dado = dis(gen);
                 if(dado <= joao[j]){
-                    //printf("%f <= %f\n", dado, joao[j]);
                     clicks[i][j] = clicks[i][j] + 1;
                 }
             }
         }
-        //printf("\n");
-    
-        /*
-        for(int j = 0; j < quantidadeCategorias; j++){
-            totaisClk += clicks[i][j];
-        }
-        */
 
         for(int j = 0; j < quantidadeCategorias; j++){
             clicks[i][j] = clicks[i][j]/(1000+(quantidadeCategorias*50));
         }
 
-        /*
-        printf("Clicks %d, tem os seguintes dados: ", i);
         for(int j = 0; j < quantidadeCategorias; j++){
-            printf("%f ", clicks[i][j]);
-        }
-        printf("\n");
-        */
-
-        for(int j = 0; j < quantidadeCategorias; j++){
-            //diferenca += pow(((clicks[i][j]) - (populacao[i][j])),2);
-            //diferenca += abs(clicks[i][j] - populacao[i][j]);
             diferenca[i] += pow(abs(clicks[i][j] - pow(populacao[i].atributos[j], 2)), 3);
         }
-
-        /* CÁLCULO DO FITNESS
-
-
-            obs: quanto menor o fitness, melhor a recomendação
-        */
 
         populacao[i].Fit = diferenca[i];
 
@@ -130,7 +101,6 @@ void avaliaPopulacao(){
 
 
 void Elitismo(){
-    //Crossover
     for(int i = 0; i < tamPopulacao; i++){
         if (i == melhorI){ // Protege o melhor indivíduo
             continue;
@@ -143,7 +113,6 @@ void Elitismo(){
 }
 
 void mutacao(){
-    //Mutacao
     float Ptotal1 = 0;
     float variacao = dominio * taxaMutacao;
     float mutacao;
@@ -151,8 +120,6 @@ void mutacao(){
         Ptotal1 = 0;
         for(int j = 0; j < quantidadeCategorias; j++){
             mutacao = (dis2(gen))*variacao;
-
-            //printf("mutacao: %f \n\n", mutacao);
 
             populacao[i].atributos[j] = populacao[i].atributos[j] + mutacao;
             if(populacao[i].atributos[j] > limite_sup){
@@ -164,26 +131,11 @@ void mutacao(){
             Ptotal1 += populacao[i].atributos[j];
         }
 
-       /*printf("Elemento %d, tem os seguintes dados: ", i);
-        for(int j = 0; j < quantidadeCategorias; j++){
-            printf("%f ", populacao[i][j]);
-        }
-        printf("\n\nP total: %f \n\n", Ptotal1);
-        */
-
         if (Ptotal1 > 0) {
             for(int j = 0; j < quantidadeCategorias; j++){
                 populacao[i].atributos[j] = populacao[i].atributos[j]/Ptotal1;
             }
         }
-
-        /*
-       printf("Elemento %d, tem os seguintes dados: ", i);
-        for(int j = 0; j < quantidadeCategorias; j++){
-            printf("%f ", populacao[i][j]);
-        }
-        printf("\n\n");
-        */
     }
 }
 
@@ -205,16 +157,11 @@ void predacao(int quantidade) {
     for(int j = 0; j < quantidadeCategorias; j++){
         melhorV[j] = populacao[melhorI].atributos[j];
     }
-
-    for(int i = 0; i < tamPopulacao; i++) {
-        //printf("Fit do %dº pior %f \n", i, populacao[i].Fit);
-    }
     
     int numMortos = (quantidade/100) * tamPopulacao;
 
     for(int i = 0; i < numMortos; i++){ // Substitui os mais fracos hahaahah
         Ptotal = 0;
-        //printf("Fit do substituido %f \n", populacao[i].Fit);
         for(int j = 0; j < quantidadeCategorias; j++){
             populacao[i].atributos[j] = dis(gen);
             Ptotal += populacao[i].atributos[j];
@@ -265,7 +212,6 @@ void mutacaoPersona(){
     float mutacao;
     for(int j = 0; j < quantidadeCategorias; j++){
         mutacao = (dis2(gen))*variacao;
-        //printf("mutacao: %f \n\n", mutacao);
 
         joao[j] = joao[j] + mutacao;
         if(joao[j]>limite_sup){
@@ -418,8 +364,8 @@ void displayWindow() {
 void initializeWindows() {
     for (int i = 0; i < numWindows; i++) {
         std::string windowTitle = (i < quantidadeCategorias)
-                                      ? "Janela Antiga " + std::to_string(i + 1)
-                                      : "Janela Nova " + std::to_string(i - quantidadeCategorias + 1);
+                                      ? "Atributo " + std::to_string(i + 1)
+                                      : "Diferenca " + std::to_string(i - quantidadeCategorias + 1);
         glutCreateWindow(windowTitle.c_str());
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
