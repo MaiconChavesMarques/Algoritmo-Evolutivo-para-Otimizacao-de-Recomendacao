@@ -2,6 +2,8 @@
 
 Este repositório contém a implementação de um **algoritmo evolutivo** para um sistema de recomendação balanceada, em que o objetivo é ajustar as recomendações feitas a um usuário com base nas suas preferências e interações simuladas (cliques).
 
+![Descrição da Imagem](https://raw.githubusercontent.com/username/repo/branch/caminho/para/sua-imagem.extensão)
+
 ## Descrição Geral
 
 O algoritmo evolutivo utiliza uma abordagem baseada em seleção, cruzamento e mutação para otimizar as recomendações. Cada recomendação é representada por um **indivíduo**, que possui atributos correspondentes a categorias diferentes. Esses atributos indicam a distribuição da recomendação entre as categorias. A soma dos atributos de cada indivíduo é normalizada para garantir que sempre totalizem 1.
