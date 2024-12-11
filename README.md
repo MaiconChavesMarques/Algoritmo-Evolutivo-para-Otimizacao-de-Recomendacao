@@ -39,6 +39,16 @@ Além disso, as preferências do usuário também podem sofrer mutações contro
 - `taxa_predacao`: Frequência com que ocorre a predação na população.
 - `porcentagemMortos`: Proporção de indivíduos substituídos durante a predação.
 
+### Gráficos
+- <strong>`Atributo i`</strong>: Existem n gráficos para os n atributos do usuário. Cada gráfico representa um atributo diferente.<br><br>
+A <ins>linha verde</ins> representa o valor real daquele atributo do usuário, ao qual o sistema de recomendação quer chegar. <br> 
+A <ins>linha vermelha</ins> representa o valor daquele atributo do "melhor de todos" <br>
+A <ins>linha azul</ins> representa o valor daquele atributo da média de todos os índividuos <br><br>
+
+- <strong>`Diferença i`</strong>: Existem n gráficos para representar as diferenças<br><br>
+A <ins>linha rosa</ins> representa, em relação ao atributo i,  a diferença entre o <ins>joão</ins> e o <ins>melhor de todos</ins>.<br>
+A <ins>linha amarela</ins> representa, em relação ao atributo i, a diferença entre o <ins>melhor de todos</ins> e a <ins> média</ins>.<br><br>
+
 ## Como funciona a avaliação?
 
 O algoritmo simula cliques do usuário em cada categoria com base em suas preferências. A diferença entre os cliques simulados e os valores esperados (o quadrado dos atributos do indivíduo) é usada para calcular a aptidão (`Fit`). Indivíduos com menor diferença são considerados melhores.
