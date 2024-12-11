@@ -14,7 +14,7 @@ uniform_real_distribution<> dis2(-1.0, 1.0);
 
 #define tamPopulacao 100 // Quantidade de individuos
 #define quantidadeCategorias 5 // Quantidade de categorias que ocorre a recomendação
-#define taxaMutacao 0.01
+#define taxaMutacao 0.02
 #define limite_sup 1.0
 #define limite_inf 0
 #define dominio 1
@@ -68,7 +68,7 @@ void avaliaPopulacao(){
         diferenca[i] = 0;
         for(int j = 0; j < quantidadeCategorias; j++){
             //printf("%d ", (int)(populacao[i][j]*100));
-            for(int k = 0; k < (int)(populacao[i].atributos[j]*1000)+100; k++){
+            for(int k = 0; k < (int)(populacao[i].atributos[j]*1000)+50; k++){
                 dado = dis(gen);
                 if(dado <= joao[j]){
                     //printf("%f <= %f\n", dado, joao[j]);
@@ -85,7 +85,7 @@ void avaliaPopulacao(){
         */
 
         for(int j = 0; j < quantidadeCategorias; j++){
-            clicks[i][j] = clicks[i][j]/(1000+(quantidadeCategorias*100));
+            clicks[i][j] = clicks[i][j]/(1000+(quantidadeCategorias*50));
         }
 
         /*
@@ -260,7 +260,7 @@ void visualiza(){
 
 void mutacaoPersona(){
     float variacao = dominio * taxaMutacao;
-    variacao = variacao*45;
+    variacao = variacao*10;
     float Ptotal1 = 0;
     float mutacao;
     for(int j = 0; j < quantidadeCategorias; j++){
