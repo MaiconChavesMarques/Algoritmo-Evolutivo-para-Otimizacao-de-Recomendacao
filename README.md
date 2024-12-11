@@ -48,7 +48,11 @@ O algoritmo simula cliques do usuário em cada categoria com base em suas prefer
 Certifique-se de ter o compilador g++ instalado e compile o código com:
 
 ```bash
-g++ -std=c++17 -o algoritmo algoritmo.cpp
+g++ -o evolutivo evo9.cpp -lGL -lGLU -lglut
+```
+Depois de compilado, rode:
+```bash
+./evolutivo
 ```
 # Aplicações
 
