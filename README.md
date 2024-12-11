@@ -93,6 +93,6 @@ Este algoritmo pode ser usado para:
 3. Estudos de algoritmos evolutivos com dinâmica de predação.
 
 ## Alunos:
-<li> Henrique Yukio Sekido: </li>
-<li> Karl Altenhofen Cruz: </li>
-<li> Maicon Chaves Marques: </li>
+<li> Henrique Yukio Sekido: 14614564</li>
+<li> Karl Altenhofen Cruz: 14585976</li>
+<li> Maicon Chaves Marques: 14593530</li>
