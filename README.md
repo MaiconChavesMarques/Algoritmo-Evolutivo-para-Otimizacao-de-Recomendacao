@@ -49,3 +49,8 @@ Certifique-se de ter o compilador g++ instalado e compile o código com:
 
 ```bash
 g++ -std=c++17 -o algoritmo algoritmo.cpp
+
+## Alunos:
+<li> Henrique Yukio Sekido: </li>
+<li> Karl Altenhofen Cruz: </li>
+<li> Maicon Chaves Marques: </li>
