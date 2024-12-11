@@ -43,17 +43,36 @@ Além disso, as preferências do usuário também podem sofrer mutações contro
 
 O algoritmo simula cliques do usuário em cada categoria com base em suas preferências. A diferença entre os cliques simulados e os valores esperados (o quadrado dos atributos do indivíduo) é usada para calcular a aptidão (`Fit`). Indivíduos com menor diferença são considerados melhores.
 
-## Como executar
+# Instruções para Rodar o Código no Linux
 
-Certifique-se de ter o compilador g++ instalado e compile o código com:
+Antes de iniciar, certifique-se de que os seguintes pacotes estão instalados no seu sistema:
+- `g++` (compilador C++)
+- `freeglut` (biblioteca OpenGL)
+
+No Ubuntu ou distribuições baseadas no Debian, você pode instalar os pacotes necessários com o comando:
+```bash
+sudo apt-get update && sudo apt-get install -y g++ freeglut3 freeglut3-dev
+```
+## Compilando o Código
+
+Salve o código em um arquivo com extensão .cpp, por exemplo: evo9.cpp.
+Abra o terminal e navegue até o diretório onde o arquivo foi salvo.
+Compile o código usando o seguinte comando:
 
 ```bash
 g++ -o evolutivo evo9.cpp -lGL -lGLU -lglut
 ```
+Este comando gera um executável chamado evolutivo.
+
+## Executando o Programa
+
 Depois de compilado, rode:
 ```bash
 ./evolutivo
 ```
+Certifique-se de que os valores de variáveis como quantidadeCategorias, tamPopulacao, e estruturas como populacao e joao estão definidos no seu código ou em arquivos auxiliares, pois o código fornecido depende dessas variáveis externas.
+Caso o programa retorne erros ou não funcione como esperado, revise os detalhes de inicialização dessas variáveis.
+
 # Aplicações
 
 Este algoritmo pode ser usado para:
