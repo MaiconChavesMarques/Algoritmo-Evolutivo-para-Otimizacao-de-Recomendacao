@@ -2,7 +2,11 @@
 
 Este repositório contém a implementação de um **algoritmo evolutivo** para um sistema de recomendação balanceada, em que o objetivo é ajustar as recomendações feitas a um usuário com base nas suas preferências e interações simuladas (cliques).
 
-![Descrição da Imagem](https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2016-48-30.png))
+![Descrição da Imagem](https://github.com/MaiconChavesMarques/Algoritmo-Evolutivo-para-Otimizacao-de-Recomendacao/blob/main/Imagens/Captura%20de%20tela%20de%202024-12-11%2016-48-30.png)
+
+# Link do Vídeo
+
+[https://youtu.be/x9VkD12Ihx0?si=wJPJYCvtEEg5yVfl](https://youtu.be/G6YjvQ9zC80?si=f80Wr04hFtkhcgLW)
 
 ## Descrição Geral
 
@@ -100,10 +104,6 @@ Este algoritmo pode ser usado para:
 1. Sistemas de recomendação que necessitam de balanceamento entre categorias.
 2. Simulações para otimizar a correspondência entre preferências de usuários e itens recomendados.
 3. Estudos de algoritmos evolutivos com dinâmica de predação.
-
-# Link do Vídeo
-
-https://youtu.be/x9VkD12Ihx0?si=wJPJYCvtEEg5yVfl
 
 ## Alunos:
 <li> Henrique Yukio Sekido: 14614564</li>
